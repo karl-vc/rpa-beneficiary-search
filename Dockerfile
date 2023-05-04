@@ -12,4 +12,4 @@ RUN yum install -y unzip && \
     unzip /tmp/chromedriver.zip -d /opt/ && \
     unzip /tmp/chrome-linux.zip -d /opt/
 
-CMD ["uvicorn", "src.main_app:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "src.main_app:app", "--host", "127.0.0.1", "--port", "8000"]
