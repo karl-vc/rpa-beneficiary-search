@@ -81,35 +81,35 @@ def captcha_value(captcha_path):
 class BeneficiarySearch:
     def __init__(self):
 #-----------------------------------for lambda------------------------------------------------------------------------------------
-        options = webdriver.ChromeOptions()
-        options.binary_location = '/opt/chrome/chrome'
-        options.add_argument("--headless")
-        options.add_argument("--no-sandbox")
-        options.add_argument("--disable-gpu")
-        options.add_argument("--window-size=1920x1080")
-        options.add_argument("--single-process")
-        options.add_argument("--disable-dev-shm-usage")
-        options.add_argument("--disable-dev-tools")
-        options.add_argument("--no-zygote")
-        options.add_argument(f"--user-data-dir={mkdtemp()}")
-        options.add_argument(f"--data-path={mkdtemp()}")
-        options.add_argument(f"--disk-cache-dir={mkdtemp()}")
-        options.add_argument("--remote-debugging-port=9222")
-        self.driver = webdriver.Chrome("/opt/chromedriver",
-                               options=options)
-        self.driver.maximize_window()
+        # options = webdriver.ChromeOptions()
+        # options.binary_location = '/opt/chrome/chrome'
+        # options.add_argument("--headless")
+        # options.add_argument("--no-sandbox")
+        # options.add_argument("--disable-gpu")
+        # options.add_argument("--window-size=1920x1080")
+        # options.add_argument("--single-process")
+        # options.add_argument("--disable-dev-shm-usage")
+        # options.add_argument("--disable-dev-tools")
+        # options.add_argument("--no-zygote")
+        # options.add_argument(f"--user-data-dir={mkdtemp()}")
+        # options.add_argument(f"--data-path={mkdtemp()}")
+        # options.add_argument(f"--disk-cache-dir={mkdtemp()}")
+        # options.add_argument("--remote-debugging-port=9222")
+        # self.driver = webdriver.Chrome("/opt/chromedriver",
+        #                        options=options)
+        # self.driver.maximize_window()
 
 #-------------------------------------------------for local-----------------------------------------------------------
 
 
-        # options = webdriver.ChromeOptions()
-        # options.add_argument("--headless")
-        # options.add_argument("--no-sandbox")
-        # options.add_argument("--window-size=1920x1080")
-        # options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3")
-        # self.driver = webdriver.Chrome(ChromeDriverManager().install() , options = options)
+        options = webdriver.ChromeOptions()
+        options.add_argument("--headless")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--window-size=1920x1080")
+        options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3")
+        self.driver = webdriver.Chrome(ChromeDriverManager().install() , options = options)
 
-        # self.driver.maximize_window()
+        self.driver.maximize_window()
 
 
 #-------------------------------------------------------------------------------------------------------------------------
